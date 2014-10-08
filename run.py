@@ -8,6 +8,7 @@ import os.path
 
 def main():
   print("Starting process, current local time ->",time.localtime())
+  driver.screen_start()
   SelD.open_site()
   for make in driver.MAKES:
     SelD.select_make(make)
@@ -42,6 +43,7 @@ def main():
     #SelD.drv.get("http://forums.edmunds.com")
   print("\n\nFinished TOPICS\n\n")
   SelD.close()
+  driver.screen_stop()
   print("Process finished, current local time ->", time.localtime())
 
 if __name__ == "__main__":
