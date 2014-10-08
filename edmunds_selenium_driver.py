@@ -4,11 +4,12 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import random
 import time
-import contextlib
+from pyvirtualdisplay import Display
 
 DRIVER = webdriver.Firefox()
 ACTIONS = ActionChains(DRIVER)
-DISPLAY = pyvirtualdisplay.Display(visible = False, size = (800, 600))
+DISPLAY = Display(visible=0, size=(800, 600))
+
 
 MAKES = ['acura',
   'alfa-romeo',
