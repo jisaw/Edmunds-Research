@@ -93,8 +93,11 @@ class Edmunds_selenium_driver():
 
 def random_timeout():
   r = random.randint(0,20)
-  if r<16 and r>9:
+  if r<20 and r>10:
+    print("Sleeping")
     time.sleep(random.randint(0,30))
     return True
   else:
+    print("Not Sleeping")
     return False
+

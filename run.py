@@ -17,6 +17,7 @@ def main():
     for title in dtitles:
       titles.append(title.text)
     for i in range(len(dtitles)):
+      driver.random_timeout()
       try:
         dtitles = SelM.get_discussion_titles()
         print ("\n\n",i,"\n\n")
