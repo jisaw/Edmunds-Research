@@ -7,8 +7,8 @@ import traceback
 import os.path
 
 def main():
-  print("Starting process, current local time ->",time.localtime())
   driver.screen_start()
+  print("Starting process, current local time ->",time.localtime())
   SelD.open_site()
   for make in driver.MAKES:
     SelD.select_make(make)
